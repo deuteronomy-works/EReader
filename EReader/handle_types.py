@@ -1,7 +1,22 @@
-
+import os
 
 class HandleTypes:
 
+    @staticmethod
+    def save_bytes_content(filename, content):
+        folder, name = os.path.split(filename)
+        if folder:
+            os.makedirs(folder)
+        with open(filename, mode='wb') as raw_file:
+            raw_file.write(content)
+    
+    @staticmethod
+    def save_content(filename, content):
+        folder, name = os.path.split(filename)
+        if folder:
+            os.makedirs(folder)
+        with open(filename, mode='wb') as write_file:
+            write_file.write(content)
 
     @staticmethod
     def ITEM_UNKNOWN(item):
@@ -17,8 +32,8 @@ class HandleTypes:
 
     @staticmethod
     def ITEM_STYLE(item) :
-        print(item.get_name())
-        content = item.get_content()
+        HandleTypes.save_content(item.get_name(),item.get_content())
+        content = ""
         return content
 
     @staticmethod
