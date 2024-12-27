@@ -1,9 +1,19 @@
+import os
+
 import ebooklib
 from ebooklib import epub
+
 from handle_types import HandleTypes
 
-fileIn = "./ex2.epub"
-fileOut = "tags_view.txt"
+fileIn = "./ex1.epub"
+
+def save_book_details():
+    _, filename = os.path.split(fileIn)
+    name, _ = os.path.splitext(filename)
+    if not os.path.exists(name):
+        os.makedirs(name)
+
+    os.chdir(name)
 
 
 book = epub.read_epub(fileIn)
@@ -23,16 +33,10 @@ ebooklib.ITEM_COVER: HandleTypes.ITEM_COVER,
 ebooklib.ITEM_SMIL: HandleTypes.ITEM_SMIL
 }
 
-ind = 0
-for item in book.get_items():
-    ind += 1
-    if ind < 5:
-          continue
-    content = tags[item.get_type()](item)
-    """ if item.get_type() == ebooklib.ITEM_DOCUMENT:
-        bodyContent = item.get_body_content().decode()
-        content += bodyContent """
-    break
+save_book_details()
 
-with open(fileOut, 'wb') as fout:
-        fout.write(content)
+
+
+for item in book.get_items():
+    content = tags[item.get_type()](item)
+
