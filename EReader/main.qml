@@ -1,6 +1,6 @@
 import QtQuick
 import QtQuick.Controls.Basic
-//import QtWebEngine
+import QtWebEngine
 
 ApplicationWindow {
     visible: true
@@ -8,36 +8,16 @@ ApplicationWindow {
     height: 400
     title: "Ereader"
 
+    WebEngineView {
+        anchors.fill: parent
+        url: "file:///C:/Users/USER/Documents/GitHub/EReader/EReader/iframe.html"
+
+    }
+
     /*WebEngineView {
         anchors.fill: parent
-        url: "file:///C:/Users/USER/Documents/GitHub/EReader/EReader/index.xhtml"
-
+        url: ""
     }*/
-
-    TreeView {
-        width: 200
-        height: 200
-        model: ListModel {
-            ListElement {
-                name: "l"
-                children: [ListElement{name: "ll"}]
-            }
-            ListElement {
-                name: "l2"
-            }
-        }
-
-        delegate: TreeViewDelegate {} /*Rectangle {
-            width: 200
-            height: 20
-            color: "gold"
-
-            Text {
-                text:index
-            }
-
-        }*/
-    }
 
 
 }
