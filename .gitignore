@@ -161,6 +161,7 @@ cython_debug/
 
 
 # Project
-ex*/
+user_contents/
+*/reader_files/reader.html
 *.epub
 *.pdf
