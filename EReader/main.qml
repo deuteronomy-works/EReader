@@ -6,8 +6,8 @@ import QtWebEngine
 
 ApplicationWindow {
     visible: true
-    width: 400
-    height: 400
+    width: 920
+    height: 600
     title: "Ereader"
 
     property string users_epub_file
