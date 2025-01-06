@@ -24,8 +24,9 @@ ApplicationWindow {
     }
 
     WebEngineView {
+        id: webEngine
         anchors.fill: parent
-        url: "file:///C:/Users/USER/Documents/GitHub/EReader/EReader/iframe.html"
+        url: "file:///C:/Users/USER/Documents/GitHub/EReader/EReader/reader.html"
 
     }
 
