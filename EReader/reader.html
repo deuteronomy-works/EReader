@@ -1,8 +1,12 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <link href="{{CSS_FILE}}" rel="stylesheet" />
+    </head>
 <body>
-<iframe width="100%" height="300px" src="./ex1/index.xhtml" name="iframe_a"></iframe>
-<iframe width="100%" height="100px" src="./ex1/nav.xhtml" name="iframe_b"></iframe>
-<p><a href="./ex1/whatsnew/index.xhtml" target="iframe_a">W3Schools.com</a></p>
+    <div class="iframe_cont">
+        <iframe src="{{NAV_FILE}}" name="iframe_b" class="iframe_nav"></iframe>
+        <iframe src="{{INDEX_FILE}}" name="iframe_a" class="iframe_main"></iframe>
+    </div>
 </body>
 </html>
