@@ -1,0 +1,29 @@
+nav {
+    background-color: whitesmoke;
+    margin: 0;
+    padding: .5em;
+}
+
+ol {
+    list-style: none;
+    margin: 0;
+}
+
+li a:hover {
+    background-color: #ccc;
+}
+
+li a {
+    display: block;
+    padding: .4em .5em;
+    text-decoration: none;
+    border-radius: .2em;
+}
+
+ol li ol {
+    display: none;
+}
+
+ol li:hover > ol {
+    display: block;
+}
