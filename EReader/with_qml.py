@@ -5,6 +5,7 @@ from PyQt6.QtQml import QQmlApplicationEngine
 from PyQt6.QtWebEngineQuick import QtWebEngineQuick
 
 import misc
+from connector import Connector
 
 misc.reader_html_replacer('ex1/index.xhtml', 'ex1/nav.xhtml')
 
